@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicativo Exemplo de EJB</title>
+</head>
+<body>
+<h1>Aplicativo Exemplo de EJB</h1>
+<p>
+    <strong>Observações:</strong><br>
+    • Inserir Usuário com id=3 irá lançar a exceção de "Menor de idade inválido".<br>
+    • Inserir Usuário com id=4 fará com que o nome seja alterado para nome + " alterado" após a inserção.<br>
+    • Se tentar inserir uma Mensagem contendo palavrões (ex: palavrão1, palavrão2 ), será lançada exceção.
+</p>
+<hr>
+
+<h2>Inserir Usuário</h2>
+<form action="usuario.do" method="GET">
+    <label>ID do Usuário:</label>
+    <input type="number" name="id" required><br><br>
+
+    <label>Nome do Usuário:</label>
+    <input type="text" name="nome" required><br><br>
+
+    <input type="hidden" name="oper" value="1">
+
+    <button type="submit">Inserir Usuário</button>
+</form>
+
+<br>
+<form action="usuario.do" method="GET">
+    <input type="hidden" name="oper" value="2">
+    <button type="submit">Listar Usuários</button>
+</form>
+
+<hr>
+
+<h2>Inserir Mensagem</h2>
+<form action="mensagem.do" method="GET">
+    <label>ID da Mensagem:</label>
+    <input type="number" name="id" required><br><br>
+
+    <label>Texto da Mensagem:</label>
+    <input type="text" name="mensagem" required><br><br>
+
+    <input type="hidden" name="oper" value="1">
+
+    <button type="submit">Inserir Mensagem</button>
+</form>
+
+<br>
+<form action="mensagem.do" method="GET">
+    <input type="hidden" name="oper" value="2">
+    <button type="submit">Listar Mensagens</button>
+</form>
+</body>
+</html>
